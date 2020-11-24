@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 
 namespace _02_MvcMovie.Controllers
@@ -26,6 +27,12 @@ namespace _02_MvcMovie.Controllers
         public IActionResult Privacy()
         {
             return View();
+        }
+
+        public string Test(string name,int Id = 1)
+        {
+            return $"Id={Id},name={name}";
+            //return HtmlEncoder.Default.Encode($"Id={Id},name={name}");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
