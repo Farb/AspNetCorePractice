@@ -20,9 +20,26 @@ namespace _02_MvcMovie.Controllers
         }
 
         // GET: Movie
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string movieGenre, string searchString)
         {
-            return View(await _context.Movie.ToListAsync());
+            var genreQuery = from genre in _context.Movie
+                             orderby genre.Genre
+                             select genre.Genre;
+            var movies = _context.Movie.AsQueryable();
+            if (!string.IsNullOrEmpty(movieGenre))
+            {
+                movies = movies.Where(m => m.Genre.Contains(movieGenre));
+            }
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                movies = movies.Where(m => m.Title.Contains(searchString));
+            }
+            var vm = new MovieGenreViewModel
+            {
+                Movies = await movies.ToListAsync(),
+                Genres=new SelectList(await genreQuery.Distinct().ToListAsync())
+            };
+            return View(vm);
         }
 
         // GET: Movie/Details/5
@@ -54,7 +71,7 @@ namespace _02_MvcMovie.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Price")] Movie movie)
+        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Price,Rating")] Movie movie)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +103,7 @@ namespace _02_MvcMovie.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,ReleaseDate,Genre,Price")] Movie movie)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,ReleaseDate,Genre,Price,Rating")] Movie movie)
         {
             if (id != movie.Id)
             {
