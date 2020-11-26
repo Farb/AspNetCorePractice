@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30709.132
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreWeb01", "AspNetCoreWeb01\AspNetCoreWeb01.csproj", "{8C3D31AD-43FB-4563-828A-239FC1D268BA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreWebApi01", "AspNetCoreWebApi01\AspNetCoreWebApi01.csproj", "{DBCB1BA8-60BF-4DA4-80F4-0BDE01B5D111}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04AspNetCoreWebApi01", "AspNetCoreWebApi01\04AspNetCoreWebApi01.csproj", "{DBCB1BA8-60BF-4DA4-80F4-0BDE01B5D111}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01RazorPagesMovie", "RazorPagesMovie\01RazorPagesMovie.csproj", "{4B9B5A19-3C8E-4201-903C-A95FFE585122}"
 EndProject
