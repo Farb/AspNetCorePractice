@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02_MvcMovie", "02_MvcMovie\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03TodoListBlazorApp", "03TodoListBlazorApp\03TodoListBlazorApp.csproj", "{3D3D4DF8-937F-472B-A797-1C96E53706FF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05MongoDbBooksApi", "05MongoDbBooksApi\05MongoDbBooksApi.csproj", "{7A476EB1-63BC-4D84-846E-EDAEBA9E105C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{3D3D4DF8-937F-472B-A797-1C96E53706FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D3D4DF8-937F-472B-A797-1C96E53706FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D3D4DF8-937F-472B-A797-1C96E53706FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A476EB1-63BC-4D84-846E-EDAEBA9E105C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A476EB1-63BC-4D84-846E-EDAEBA9E105C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A476EB1-63BC-4D84-846E-EDAEBA9E105C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A476EB1-63BC-4D84-846E-EDAEBA9E105C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
