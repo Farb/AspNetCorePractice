@@ -21,6 +21,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06BlazorSignalRApp.Client",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06BlazorSignalRApp.Shared", "06BlazorSignalRApp\Shared\06BlazorSignalRApp.Shared.csproj", "{AEA541D0-6760-451B-9D27-4D54ED79B4A0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07GrpcGreeter", "GrpcGreeter\07GrpcGreeter.csproj", "{F99CA235-C9EB-4840-85BD-1F7DBFE88C62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07GrpcGreeterClient", "GrpcGreeterClient\07GrpcGreeterClient.csproj", "{D65BC003-69FC-4B8C-BCCC-2B49253A2EA3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +67,14 @@ Global
 		{AEA541D0-6760-451B-9D27-4D54ED79B4A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AEA541D0-6760-451B-9D27-4D54ED79B4A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AEA541D0-6760-451B-9D27-4D54ED79B4A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F99CA235-C9EB-4840-85BD-1F7DBFE88C62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F99CA235-C9EB-4840-85BD-1F7DBFE88C62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F99CA235-C9EB-4840-85BD-1F7DBFE88C62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F99CA235-C9EB-4840-85BD-1F7DBFE88C62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D65BC003-69FC-4B8C-BCCC-2B49253A2EA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D65BC003-69FC-4B8C-BCCC-2B49253A2EA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D65BC003-69FC-4B8C-BCCC-2B49253A2EA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D65BC003-69FC-4B8C-BCCC-2B49253A2EA3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
