@@ -1,8 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <RootNamespace>_02_MvcMovie</RootNamespace>
+    <UserSecretsId>e0131292-80b9-454f-9657-f990484a2f0e</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
