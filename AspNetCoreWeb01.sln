@@ -13,7 +13,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02_MvcMovie", "02_MvcMovie\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03TodoListBlazorApp", "03TodoListBlazorApp\03TodoListBlazorApp.csproj", "{3D3D4DF8-937F-472B-A797-1C96E53706FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05MongoDbBooksApi", "05MongoDbBooksApi\05MongoDbBooksApi.csproj", "{7A476EB1-63BC-4D84-846E-EDAEBA9E105C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05MongoDbBooksApi", "05MongoDbBooksApi\05MongoDbBooksApi.csproj", "{7A476EB1-63BC-4D84-846E-EDAEBA9E105C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06BlazorSignalRApp.Server", "06BlazorSignalRApp\Server\06BlazorSignalRApp.Server.csproj", "{9F256740-7FFA-4189-9EDC-48702426B2C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06BlazorSignalRApp.Client", "06BlazorSignalRApp\Client\06BlazorSignalRApp.Client.csproj", "{73ADAF88-12C6-4774-908B-3C6C739F62A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06BlazorSignalRApp.Shared", "06BlazorSignalRApp\Shared\06BlazorSignalRApp.Shared.csproj", "{AEA541D0-6760-451B-9D27-4D54ED79B4A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +51,18 @@ Global
 		{7A476EB1-63BC-4D84-846E-EDAEBA9E105C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A476EB1-63BC-4D84-846E-EDAEBA9E105C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A476EB1-63BC-4D84-846E-EDAEBA9E105C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F256740-7FFA-4189-9EDC-48702426B2C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F256740-7FFA-4189-9EDC-48702426B2C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F256740-7FFA-4189-9EDC-48702426B2C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F256740-7FFA-4189-9EDC-48702426B2C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73ADAF88-12C6-4774-908B-3C6C739F62A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73ADAF88-12C6-4774-908B-3C6C739F62A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73ADAF88-12C6-4774-908B-3C6C739F62A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73ADAF88-12C6-4774-908B-3C6C739F62A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEA541D0-6760-451B-9D27-4D54ED79B4A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEA541D0-6760-451B-9D27-4D54ED79B4A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEA541D0-6760-451B-9D27-4D54ED79B4A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEA541D0-6760-451B-9D27-4D54ED79B4A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
