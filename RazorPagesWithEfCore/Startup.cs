@@ -10,6 +10,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using RazorPagesWithEfCore.Data;
+using Microsoft.AspNetCore.Mvc;
 
 namespace RazorPagesWithEfCore
 {
@@ -25,6 +26,12 @@ namespace RazorPagesWithEfCore
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            int MyMaxModelBindingCollectionSize = 100;
+            Int32.TryParse(Configuration["MyMaxModelBindingCollectionSize"],
+                                       out MyMaxModelBindingCollectionSize);
+            services.Configure<MvcOptions>(opt =>
+            opt.MaxModelBindingCollectionSize = MyMaxModelBindingCollectionSize);
+
             services.AddRazorPages();
 
             services.AddDbContext<SchoolContext>(options =>

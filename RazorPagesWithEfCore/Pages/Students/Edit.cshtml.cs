@@ -30,7 +30,7 @@ namespace RazorPagesWithEfCore.Pages.Students
                 return NotFound();
             }
 
-            Student = await _context.Students.FirstOrDefaultAsync(m => m.ID == id);
+            Student = await _context.Students.FindAsync(id);
 
             if (Student == null)
             {
@@ -41,9 +41,11 @@ namespace RazorPagesWithEfCore.Pages.Students
 
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see https://aka.ms/RazorPagesCRUD.
-        public async Task<IActionResult> OnPostAsync()
+        public async Task<IActionResult> OnPostAsync(int id)
         {
-            if (!ModelState.IsValid)
+            #region defult
+            /*
+             if (!ModelState.IsValid)
             {
                 return Page();
             }
@@ -65,8 +67,21 @@ namespace RazorPagesWithEfCore.Pages.Students
                     throw;
                 }
             }
+             */
+            #endregion
 
-            return RedirectToPage("./Index");
+            var studentToUpdate =await _context.Students.FindAsync(id);
+            if (studentToUpdate == null)
+            {
+                return NotFound();
+            }
+            if (await TryUpdateModelAsync<Student>(studentToUpdate, "student",
+                s => s.FirstMidName, s => s.LastName, s => s.EnrollmentDate))
+            {
+                await _context.SaveChangesAsync();
+                return RedirectToPage("./Index");
+            }
+            return Page();
         }
 
         private bool StudentExists(int id)

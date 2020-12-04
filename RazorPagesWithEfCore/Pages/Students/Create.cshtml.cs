@@ -24,10 +24,48 @@ namespace RazorPagesWithEfCore.Pages.Students
             return Page();
         }
 
+        #region 防止过度方法1 使用TryUpdateModelAsync
+        /*
+         
         [BindProperty]
         public Student Student { get; set; }
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
+        public async Task<IActionResult> OnPostAsync()
+        {
+            //if (!ModelState.IsValid)
+            //{
+            //    return Page();
+            //}
+
+            //_context.Students.Add(Student);
+            //await _context.SaveChangesAsync();
+
+            var emptyStudent = new Student();
+
+            if (await TryUpdateModelAsync<Student>(
+                emptyStudent,
+                "student",   // Prefix for form value.
+                s => s.FirstMidName, s => s.LastName, s => s.EnrollmentDate))
+            {
+                _context.Students.Add(emptyStudent);
+                await _context.SaveChangesAsync();
+                return RedirectToPage("./Index");
+            }
+
+            return RedirectToPage("./Index");
+        }
+
+         */
+        #endregion
+
+
+        #region 防止过度发布方法2 使用ViewModel
+
+        #endregion
+        [BindProperty]
+        public StudentVM StudentVM { get; set; }
+
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)
@@ -35,9 +73,9 @@ namespace RazorPagesWithEfCore.Pages.Students
                 return Page();
             }
 
-            _context.Students.Add(Student);
+            var entry = _context.Add(new Student());
+            entry.CurrentValues.SetValues(StudentVM);
             await _context.SaveChangesAsync();
-
             return RedirectToPage("./Index");
         }
     }
