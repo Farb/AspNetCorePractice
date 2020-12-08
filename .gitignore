@@ -341,3 +341,5 @@ healthchecksdb
 /AspNetCoreWebApi01/Properties
 /02_MvcMovie/Properties/ServiceDependencies/02MvcMovie20201129185858 - Web Deploy
 /AspNetCoreWebApi01/.config
+*.db-shm
+*.db-wal

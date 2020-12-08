@@ -25,7 +25,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07GrpcGreeter", "GrpcGreete
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07GrpcGreeterClient", "GrpcGreeterClient\07GrpcGreeterClient.csproj", "{D65BC003-69FC-4B8C-BCCC-2B49253A2EA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08RazorPagesWithEfCore", "RazorPagesWithEfCore\08RazorPagesWithEfCore.csproj", "{5570D829-042C-48BE-B027-3AD724174EA7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08RazorPagesWithEfCore", "RazorPagesWithEfCore\08RazorPagesWithEfCore.csproj", "{5570D829-042C-48BE-B027-3AD724174EA7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

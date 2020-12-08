@@ -21,19 +21,38 @@ namespace RazorPagesWithEfCore.Pages.Students
             _mvcOptions = mvcOptions.Value;
         }
 
-        public IList<Student> Student { get; set; }
+        //public IList<Student> Students { get; set; }
+        //分页实体列表
+        public PaginatedList<Student> Students { get; set; }
 
         public string NameSort { get; set; }
         public string DateSort { get; set; }
         public string CurrentFilter { get; set; }
         public string CurrentSort { get; set; }
-        public async Task OnGetAsync(string sortOrder)
+        public async Task OnGetAsync(string sortOrder, string searchString, string currentFilter, int? pageIndex)
         {
+            CurrentSort = sortOrder;
             NameSort = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             DateSort = sortOrder == "Date" ? "date_desc" : "Date";
             //Student = await _context.Students.Take(_mvcOptions.MaxModelBindingCollectionSize).ToListAsync();
             IQueryable<Student> studentsIQ = from s in _context.Students
                                              select s;
+            if (!string.IsNullOrWhiteSpace(searchString))
+            {
+                pageIndex = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+            CurrentFilter = searchString;
+            //.ToLower()这里解决Sqllite中区分大小写
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                searchString = searchString.ToLower();
+                studentsIQ = studentsIQ.Where(s => s.LastName.ToLower().Contains(searchString) ||
+                s.FirstMidName.ToLower().Contains(searchString));
+            }
 
             switch (sortOrder)
             {
@@ -50,8 +69,8 @@ namespace RazorPagesWithEfCore.Pages.Students
                     studentsIQ = studentsIQ.OrderBy(s => s.LastName);
                     break;
             }
-
-            Student = await studentsIQ.AsNoTracking().ToListAsync();
+            int pageSize = 3;
+            Students = await PaginatedList<Student>.CreateAsync(studentsIQ, pageIndex ?? 1, pageSize);
         }
     }
 }
