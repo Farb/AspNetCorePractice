@@ -6,6 +6,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Tsinghua.db" />
+    <None Remove="Tsinghua.db-shm" />
+    <None Remove="Tsinghua.db-wal" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Pages\Courses\" />
   </ItemGroup>
 
