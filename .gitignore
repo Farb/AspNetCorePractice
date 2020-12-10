@@ -343,3 +343,4 @@ healthchecksdb
 /AspNetCoreWebApi01/.config
 *.db-shm
 *.db-wal
+*.db
