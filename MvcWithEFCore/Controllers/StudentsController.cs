@@ -152,6 +152,7 @@ namespace MvcWithEFCore.Controllers
                         "see your system administrator.");
                 }
             }
+
             return View(studentToUpdate);
         }
 
