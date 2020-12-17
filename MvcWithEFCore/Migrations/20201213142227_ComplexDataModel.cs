@@ -110,7 +110,7 @@ namespace MvcWithEFCore.Migrations
                 });
 
 
-            migrationBuilder.Sql("INSERT INTO dbo.Department (Name, Budget, StartDate) VALUES ('Temp', 0.00, GETDATE())");
+            //migrationBuilder.Sql("INSERT INTO dbo.Department (Name, Budget, StartDate) VALUES ('Temp', 0.00, GETDATE())");
             // Default value for FK points to department created above, with
             // defaultValue changed to 1 in following AddColumn statement.
 

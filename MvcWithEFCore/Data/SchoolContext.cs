@@ -35,6 +35,9 @@ namespace MvcWithEFCore.Data
 
             modelBuilder.Entity<CourseAssignment>()
                 .HasKey(c => new { c.CourseID, c.InstructorID });
+            //通过FluentAPI的方式添加防止并发的字段
+            //modelBuilder.Entity<Department>()
+            //    .Property(d => d.RowVersion).IsConcurrencyToken();
         }
     }
 }
