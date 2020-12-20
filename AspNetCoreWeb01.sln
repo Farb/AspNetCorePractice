@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04AspNetCoreWebApi01", "Asp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01RazorPagesMovie", "RazorPagesMovie\01RazorPagesMovie.csproj", "{4B9B5A19-3C8E-4201-903C-A95FFE585122}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02_MvcMovie", "02_MvcMovie\02_MvcMovie.csproj", "{41CE3D83-36C7-45FE-8F1D-B487B041F4CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02MvcMovie", "02_MvcMovie\02MvcMovie.csproj", "{41CE3D83-36C7-45FE-8F1D-B487B041F4CA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03TodoListBlazorApp", "03TodoListBlazorApp\03TodoListBlazorApp.csproj", "{3D3D4DF8-937F-472B-A797-1C96E53706FF}"
 EndProject
@@ -27,7 +27,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07GrpcGreeterClient", "Grpc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08RazorPagesWithEfCore", "RazorPagesWithEfCore\08RazorPagesWithEfCore.csproj", "{5570D829-042C-48BE-B027-3AD724174EA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09MvcWithEFCore", "MvcWithEFCore\09MvcWithEFCore.csproj", "{A54D5C70-4EB1-4A70-B677-4838489DE80B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "09MvcWithEFCore", "MvcWithEFCore\09MvcWithEFCore.csproj", "{A54D5C70-4EB1-4A70-B677-4838489DE80B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

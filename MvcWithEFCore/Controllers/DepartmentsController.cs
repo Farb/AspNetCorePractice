@@ -35,8 +35,15 @@ namespace MvcWithEFCore.Controllers
             {
                 return NotFound();
             }
-
-            var department = await _context.Departments
+            string querySql = "select * from department WHERE DepartmentID = {0}";
+            //方式1：使用linq查询
+            //var department = await _context.Departments
+            //    .Include(d => d.Administrator)
+            //    .AsNoTracking()
+            //    .FirstOrDefaultAsync(m => m.DepartmentID == id);
+            //方式2： 使用sql查询
+            var department =await _context.Departments
+                .FromSqlRaw($"{querySql} ", id)
                 .Include(d => d.Administrator)
                 .AsNoTracking()
                 .FirstOrDefaultAsync(m => m.DepartmentID == id);

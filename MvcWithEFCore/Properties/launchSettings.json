@@ -3,7 +3,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:8088",
+      "applicationUrl": "http://localhost:18888",
       "sslPort": 0
     }
   },
@@ -14,7 +14,7 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "http://localhost:8088"
+      "applicationUrl": "http://localhost:18888"
     },
     "MvcWithEFCore": {
       "commandName": "Project",
@@ -23,7 +23,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
       "dotnetRunMessages": "true",
-      "applicationUrl": "http://localhost:8088"
+      "applicationUrl": "http://localhost:18888"
     }
   }
 }
